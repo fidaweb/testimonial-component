@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=DM+Serif+Display&family=Josefin+Sans:wght@400;700&display=swap');
+
+:root{
+ 
+/* ### Primary */
+
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+/* ### Neutral */
+
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed';
+}
+
+body{
+    background-color: var(--Light-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.principal{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 600px;
+     /*width: 1100px; */
+   
+    width: 70%;
+    gap:20px 20px;
+    
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  
+    padding: 2rem;
+    background-color: gray;
+    border-radius: 10px;
+    gap: 2rem;
+}
+.intro{
+    display: flex;
+   gap:1rem;
+   padding: 0.5rem;
+  
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+.hook{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.first-container{
+    grid-column:1 / span 2;
+    grid-row: 1 / span 1;
+    background-color: var(--Moderate-violet);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat,no-repeat;
+    background-position: left 80% bottom 100%;
+}
+.second-container{
+    grid-column:3 / span 1;
+    grid-row: 1 / span 1;
+    background-color: var(--Very-dark-grayish-blue);
+}
+.third-container{
+    grid-column:4 / span 1;
+    grid-row: 1 / span 2;
+    background-color: var(--White);
+
+}
+.fourth-container{
+    grid-column:1 / span 1;
+    grid-row: 2 / span 1;
+    background-color: var(--White);
+}
+.fifth-container{
+    grid-column:2 / span 2;
+    grid-row:2 / span 1;
+    background-color: var(--Very-dark-blackish-blue);
+}
+img{
+    border-radius: 50%;
+    width: 30px;
+}
+.description{
+    margin-top: 2rem;
+    opacity: 70%;
+    
+}
+.hook{
+    font-size: 20px;
+    font-weight:700;
+    font-family: 'Barlow Semi Condensed';
+}
+.role{
+    opacity: 50%;
+}
+.first-container .name,
+.first-container .role,
+.first-container .text .description,
+.first-container .text .hook {
+    color: var(--White);
+}
+
+.second-container .name,
+.second-container .role,
+.second-container .text .description,
+.second-container .text .hook {
+    color: var(--White);
+}
+
+.third-container .name,
+.third-container .role,
+.third-container .text .description,
+.third-container .text .hook {
+    color: var(--Very-dark-blackish-blue);
+}
+
+.fourth-container .name,
+.fourth-container .role,
+.fourth-container .text .description,
+.fourth-container .text .hook {
+    color: var(--Very-dark-blackish-blue);
+}
+
+.fifth-container .name,
+.fifth-container .role,
+.fifth-container .text .description,
+.fifth-container .text .hook {
+    color: var(--White);
+}
+
+@media(max-width:375px){
+    
+    body{
+        height: auto;
+       
+      
+        padding: 2rem;
+    }
+    
+    .principal{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+       
+        max-width: 320px;
+        width: 85%;
+        height: auto;
+    }
+    .box{
+        grid-row: auto;
+        grid-column: auto;
+    }
+    
+}
